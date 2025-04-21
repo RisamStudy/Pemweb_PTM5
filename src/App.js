@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {createRoot} from 'react-dom/client';
+const container = document.getElementById('App');
+const root = createRoot(container);
+const people = ['STIKOM', 'Poltek', 'Cirebon'];
+const peopleList = people.map((person, i) =>
+<li>{person}</li>
+);
+root.render(<ul>{peopleList}</ul>);
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+const App = React.createElement(
+    'div',
+    null,
+    'i am div'
+);
 export default App;
